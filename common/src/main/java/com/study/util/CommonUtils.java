@@ -1,7 +1,5 @@
 package com.study.util;
 
-import java.util.Random;
-
 /**
  * 算法工具类
  * @Author Created by Daniel

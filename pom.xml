@@ -11,8 +11,16 @@
     <modules>
         <module>chapter1-introduce</module>
         <module>practice-everyday</module>
+        <module>common</module>
     </modules>
 
     <name>「数据结构与算法 - 学习记录」</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.huangttt18</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

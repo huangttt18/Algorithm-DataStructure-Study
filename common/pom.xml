@@ -9,10 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <name>「数据结构与算法 - chapter1 - introduce」</name>
-    <artifactId>chapter1-introduce</artifactId>
+    <artifactId>common</artifactId>
 
-    <dependencies>
-    </dependencies>
 
 </project>
