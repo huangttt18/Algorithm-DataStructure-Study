@@ -1,4 +1,4 @@
-package com.study.util;
+package com.study.common.util;
 
 /**
  * 算法工具类
@@ -53,14 +53,9 @@ public class CommonUtils {
         StringBuilder sb = new StringBuilder();
         sb.append("[\n\t");
         for (int i = 0;i < arr.length;i ++) {
-            sb.append("(");
-            sb.append(i);
-            sb.append(",");
             sb.append(arr[i]);
-            if (i == arr.length - 1) {
-                sb.append(")");
-            } else {
-                sb.append("),");
+            if (i != arr.length - 1) {
+                sb.append("，");
             }
             if ((i + 1) % 10 == 0) {
                 if (i == (arr.length - 1)) {
@@ -72,5 +67,17 @@ public class CommonUtils {
         }
         sb.append("]");
         System.out.println(sb.toString());
+    }
+
+    /**
+     * 交换数组中的元素
+     * @param arr
+     * @param indexSmall
+     * @param indexLarge
+     */
+    public static void swap(long[] arr, int indexSmall, int indexLarge) {
+        long temp = arr[indexSmall];
+        arr[indexSmall] = arr[indexLarge];
+        arr[indexLarge] = temp;
     }
 }

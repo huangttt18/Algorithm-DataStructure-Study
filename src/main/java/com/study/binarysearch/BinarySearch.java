@@ -1,6 +1,6 @@
 package com.study.binarysearch;
 
-import com.study.util.CommonUtils;
+import com.study.common.util.CommonUtils;
 
 /**
  * 二分查找

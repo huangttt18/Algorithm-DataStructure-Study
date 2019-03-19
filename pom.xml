@@ -12,6 +12,7 @@
         <module>chapter1-introduce</module>
         <module>practice-everyday</module>
         <module>common</module>
+        <module>chaper2-array-linkedlist</module>
     </modules>
 
     <name>「数据结构与算法 - 学习记录」</name>
