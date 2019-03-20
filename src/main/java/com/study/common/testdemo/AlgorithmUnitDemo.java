@@ -2,6 +2,8 @@ package com.study.common.testdemo;
 
 import com.study.binarysearch.BinarySearch;
 import com.study.common.util.CommonUtils;
+import com.study.insertion.InsertionSort;
+import com.study.merge.MergeSort;
 import com.study.selection.SelectionSort;
 
 import java.util.Arrays;
@@ -27,6 +29,24 @@ public class AlgorithmUnitDemo {
             long[] array = CommonUtils.randomArray(10, 100, 10);
             CommonUtils.printArray(array);
             SelectionSort.sort(array);
+            CommonUtils.printArray(array);
+        }
+    }
+
+    static class InsertionSortTestClass {
+        public static void main(String[] args) {
+            long[] array = CommonUtils.randomArray(10, 100, 10);
+            CommonUtils.printArray(array);
+            InsertionSort.sort(array);
+            CommonUtils.printArray(array);
+        }
+    }
+
+    static class MergeSortTestClass {
+        public static void main(String[] args) {
+            long[] array = CommonUtils.randomArray(10, 100, 10);
+            CommonUtils.printArray(array);
+            MergeSort.sort(array);
             CommonUtils.printArray(array);
         }
     }

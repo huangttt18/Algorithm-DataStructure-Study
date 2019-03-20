@@ -50,6 +50,10 @@ public class CommonUtils {
      * @param arr
      */
     public static void printArray(long[] arr) {
+        if (arr.length > 100) {
+            return;
+        }
+
         StringBuilder sb = new StringBuilder();
         sb.append("[\n\t");
         for (int i = 0;i < arr.length;i ++) {
