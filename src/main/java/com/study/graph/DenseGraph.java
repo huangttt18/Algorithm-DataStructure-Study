@@ -5,7 +5,8 @@ import java.util.List;
 
 /**
  * 稠密图 - 使用邻接矩阵实现
- * @Author Created by Daniel
+ *
+ * @author Created by Daniel
  */
 public class DenseGraph implements Graph {
 
@@ -30,7 +31,7 @@ public class DenseGraph implements Graph {
         this.n = n;
         this.m = 0;
         this.directed = directed;
-        for (int i = 0;i < n;i ++) {
+        for (int i = 0; i < n; i++) {
             g = new boolean[n][n];
         }
     }
@@ -60,7 +61,7 @@ public class DenseGraph implements Graph {
             g[w][v] = true;
         }
         // 边数+1
-        m ++;
+        m++;
     }
 
     @Override
@@ -78,7 +79,7 @@ public class DenseGraph implements Graph {
     public Iterable<Integer> adj(int v) {
         assert v >= 0 && v < n;
         List<Integer> adjV = new ArrayList<>();
-        for (int i = 0;i < n;i ++) {
+        for (int i = 0; i < n; i++) {
             if (g[v][i]) {
                 adjV.add(i);
             }
