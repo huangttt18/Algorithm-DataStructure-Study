@@ -73,6 +73,30 @@ public class CommonUtils {
         System.out.println(sb.toString());
     }
 
+    public static void printArray(int[] arr) {
+        if (arr.length > 100) {
+            return;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0;i < arr.length;i ++) {
+            sb.append(arr[i]);
+            if (i != arr.length - 1) {
+                sb.append("，");
+            }
+            if ((i + 1) % 10 == 0) {
+                if (i == (arr.length - 1)) {
+                    sb.append("\n");
+                } else {
+                    sb.append("\n\t");
+                }
+            }
+        }
+        sb.append("]");
+        System.out.println(sb.toString());
+    }
+
     /**
      * 交换数组中的元素
      * @param arr
