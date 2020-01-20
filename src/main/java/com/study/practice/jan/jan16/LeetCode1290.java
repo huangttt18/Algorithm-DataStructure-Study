@@ -1,4 +1,4 @@
-package com.study.practice.jan16;
+package com.study.practice.jan.jan16;
 
 /**
  * 二进制链表转整数

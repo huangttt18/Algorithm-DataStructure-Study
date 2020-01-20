@@ -1,4 +1,4 @@
-package com.study.practice.jan19;
+package com.study.practice.jan.jan19;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.study.practice.jan19;
+package com.study.practice.jan.jan19;
 
 /**
  * 删除最外层的括号

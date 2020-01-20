@@ -1,6 +1,4 @@
-package com.study.practice.jan17;
-
-import java.util.Stack;
+package com.study.practice.jan.jan17;
 
 /**
  * 分割平衡字符串

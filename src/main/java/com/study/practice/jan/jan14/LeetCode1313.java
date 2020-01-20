@@ -1,4 +1,4 @@
-package com.study.practice.jan14;
+package com.study.practice.jan.jan14;
 
 import com.study.common.util.CommonUtils;
 

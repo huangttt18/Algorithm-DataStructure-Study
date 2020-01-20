@@ -1,4 +1,4 @@
-package com.study.practice.jan16;
+package com.study.practice.jan.jan16;
 
 /**
  * 访问所有点的最小时间

@@ -1,4 +1,4 @@
-package com.study.practice.jan20;
+package com.study.practice.jan.jan20;
 
 /**
  * 奇数值单元格的数目

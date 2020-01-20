@@ -1,6 +1,4 @@
-package com.study.practice.jan15;
-
-import java.util.Arrays;
+package com.study.practice.jan.jan15;
 
 /**
  * 统计[位数]为偶数的数字

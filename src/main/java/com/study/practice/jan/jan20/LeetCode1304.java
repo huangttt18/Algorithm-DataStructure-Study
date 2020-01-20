@@ -1,4 +1,4 @@
-package com.study.practice.jan20;
+package com.study.practice.jan.jan20;
 
 import java.util.Arrays;
 

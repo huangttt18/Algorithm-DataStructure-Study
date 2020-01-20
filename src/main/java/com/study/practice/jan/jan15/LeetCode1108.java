@@ -1,4 +1,4 @@
-package com.study.practice.jan15;
+package com.study.practice.jan.jan15;
 
 /**
  * IP 地址无效化
