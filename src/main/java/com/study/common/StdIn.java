@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  *
  * @author Daniel 2020/1/21
  */
-public class StdIn {
+public final class StdIn {
 
     /*** begin: section (1 of 2) of code duplicated from In to StdIn. */
 
