@@ -45,6 +45,15 @@ public class CommonUtils {
         return result;
     }
 
+    public static int[] randomArrayInt(int rangeLeft, int rangeRight, int arrayLength) {
+        int[] result = new int[arrayLength];
+        for (int i = 0;i < arrayLength;i ++) {
+            result[i] = (int) (Math.random() * (rangeRight - rangeLeft) + rangeLeft);
+        }
+
+        return result;
+    }
+
     /**
      * 遍历输出数组
      * @param arr
@@ -105,6 +114,12 @@ public class CommonUtils {
      */
     public static void swap(long[] arr, int indexSmall, int indexLarge) {
         long temp = arr[indexSmall];
+        arr[indexSmall] = arr[indexLarge];
+        arr[indexLarge] = temp;
+    }
+
+    public static void swap(int[] arr, int indexSmall, int indexLarge) {
+        int temp = arr[indexSmall];
         arr[indexSmall] = arr[indexLarge];
         arr[indexLarge] = temp;
     }

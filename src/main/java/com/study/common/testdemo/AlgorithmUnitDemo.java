@@ -26,9 +26,13 @@ public class AlgorithmUnitDemo {
 
     static class SelectionSortTestClass {
         public static void main(String[] args) {
-            long[] array = CommonUtils.randomArray(10, 100, 10);
+//            long[] array = CommonUtils.randomArray(10, 100, 10);
+//            CommonUtils.printArray(array);
+//            SelectionSort.sort(array);
+//            CommonUtils.printArray(array);
+            int[] array = CommonUtils.randomArrayInt(10, 100, 10);
             CommonUtils.printArray(array);
-            SelectionSort.sort(array);
+            SelectionSort.sort2(array);
             CommonUtils.printArray(array);
         }
     }
