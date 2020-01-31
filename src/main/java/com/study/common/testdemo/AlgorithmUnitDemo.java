@@ -4,6 +4,7 @@ import com.study.binarysearch.BinarySearch;
 import com.study.common.util.CommonUtils;
 import com.study.insertion.InsertionSort;
 import com.study.merge.MergeSort;
+import com.study.merge.MergeSort2;
 import com.study.selection.SelectionSort;
 
 import java.util.Arrays;
@@ -48,9 +49,10 @@ public class AlgorithmUnitDemo {
 
     static class MergeSortTestClass {
         public static void main(String[] args) {
-            long[] array = CommonUtils.randomArray(10, 100, 10);
+//            long[] array = CommonUtils.randomArray(10, 100, 10);
+            int[] array = CommonUtils.randomArrayInt(10, 100, 10);
             CommonUtils.printArray(array);
-            MergeSort.sort(array);
+            MergeSort2.mergeSort(array);
             CommonUtils.printArray(array);
         }
     }

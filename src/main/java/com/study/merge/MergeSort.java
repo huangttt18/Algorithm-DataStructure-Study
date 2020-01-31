@@ -5,12 +5,14 @@ import com.study.insertion.InsertionSort;
 /**
  * 归并排序
  * 时间复杂度：O(nlogn)
+ *
  * @Author Created by Daniel
  */
 public class MergeSort {
 
     /**
      * 归并排序
+     *
      * @param arr
      */
     public static void sort(long[] arr) {
@@ -19,6 +21,7 @@ public class MergeSort {
 
     /**
      * 对[start,end]进行排序，闭区间
+     *
      * @param arr
      * @param start
      * @param end
@@ -34,7 +37,7 @@ public class MergeSort {
             return;
         }
 
-        int mid = (start + end) / 2;
+        int mid = start + (end - start) / 2;
         sort(arr, start, mid);
         sort(arr, mid + 1, end);
         // 因为两个数组都是有序的，所以，只有当左边数组最大的数比右边数组最小的数大的时候才进行归并操作
@@ -45,6 +48,7 @@ public class MergeSort {
 
     /**
      * 对排序后的数组进行归并[start,mid]-[mid + 1,end]
+     *
      * @param arr
      * @param start
      * @param mid
@@ -52,7 +56,7 @@ public class MergeSort {
      */
     private static void merge(long[] arr, int start, int mid, int end) {
         long[] aux = new long[end - start + 1];
-        for (int i = start;i <= end;i ++) {
+        for (int i = start; i <= end; i++) {
             aux[i - start] = arr[i];
         }
 
@@ -62,21 +66,21 @@ public class MergeSort {
         int i = start;
         int j = mid + 1;
         // k 为dest数组的索引
-        for (int k = start;k <= end;k ++) {
+        for (int k = start; k <= end; k++) {
             // 如果i越界，则新数组的剩下的元素全部为第二个数组的元素
             if (i > mid) {
                 arr[k] = aux[j - start];
-                j ++;
+                j++;
             } else if (j > end) {
                 // 如果j越界，则新数组的剩下的元素全部为第一个数组的元素
                 arr[k] = aux[i - start];
-                i ++;
+                i++;
             } else if (aux[i - start] < aux[j - start]) {
                 arr[k] = aux[i - start];
-                i ++;
+                i++;
             } else {
                 arr[k] = aux[j - start];
-                j ++;
+                j++;
             }
         }
     }
