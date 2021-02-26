@@ -11,6 +11,14 @@
 
     <name>「数据结构与算法 - 学习记录」</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>edu.princeton.cs</groupId>
+            <artifactId>algs4</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

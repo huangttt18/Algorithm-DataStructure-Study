@@ -12,7 +12,7 @@ import java.util.Arrays;
 /**
  * 用于做算法测试的类
  * 在类中构建算法对应的内部类来进行算法测试
- * @Author Created by Daniel
+ * @author Created by Daniel
  */
 public class AlgorithmUnitDemo {
 
