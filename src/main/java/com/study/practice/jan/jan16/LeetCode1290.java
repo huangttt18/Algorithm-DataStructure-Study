@@ -64,7 +64,7 @@ public class LeetCode1290 {
         System.out.println(getDecimalValue(root));
     }
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 

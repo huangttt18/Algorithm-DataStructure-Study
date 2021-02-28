@@ -35,7 +35,7 @@ public class LeetCode234 {
         System.out.println(isPalindrome(head));
     }
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
