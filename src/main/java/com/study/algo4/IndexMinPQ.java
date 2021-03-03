@@ -43,7 +43,7 @@ public class IndexMinPQ<Item extends Comparable<Item>> {
      * @param k
      */
     public boolean contains(int k) {
-
+        return false;
     }
 
     /**
@@ -59,21 +59,21 @@ public class IndexMinPQ<Item extends Comparable<Item>> {
      * 返回最小元素
      */
     public Item min() {
-
+        return null;
     }
 
     /**
      * 返回最小元素所在的索引
      */
     public int minIndex() {
-
+        return 0;
     }
 
     /**
      * 删除最小元素并返回其索引
      */
     public int delMin() {
-
+        return 0;
     }
 
     /**
