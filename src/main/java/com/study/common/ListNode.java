@@ -1,7 +1,5 @@
 package com.study.common;
 
-import com.study.leetcode.linkedlist.面试题0203删除中间节点;
-
 /**
  * TODO
  *
@@ -14,6 +12,11 @@ public class ListNode {
 
     public ListNode(int x) {
         val = x;
+    }
+
+    public ListNode(int x, ListNode next) {
+        val = x;
+        this.next = next;
     }
 
     public static void printLinkedList(ListNode head) {

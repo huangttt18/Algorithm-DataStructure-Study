@@ -1,6 +1,6 @@
 package com.study.leetcode.linkedlist;
 
-import com.study.leetcode.sort.MergeLinkedList;
+import com.study.common.ListNode;
 
 /**
  * //实现一种算法，删除单向链表中间的某个节点（即不是第一个或最后一个节点），假定你只能访问该节点。
@@ -22,6 +22,7 @@ import com.study.leetcode.sort.MergeLinkedList;
  * @author <a href="mailto:danielhuang9618@gmail.com"> Daniel on 2021/2/28 </a>
  * @since <span>1.0</span>
  */
+@SuppressWarnings("all")
 public class 面试题0203删除中间节点 {
 
     public static void main(String[] args) {
@@ -55,14 +56,5 @@ public class 面试题0203删除中间节点 {
         sb.append("null\n");
 
         System.out.println(sb.toString());
-    }
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
     }
 }
