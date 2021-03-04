@@ -62,12 +62,8 @@ public class LeetCode1356 {
     /**
      * 按照二进制1的数量排序
      * 如果二进制1的数量相等，那么按照值排序
-     *
-     * @param arr
-     * @return
-     */
-    /**
      * 插入排序解法
+     *
      * @param arr
      * @return
      */
