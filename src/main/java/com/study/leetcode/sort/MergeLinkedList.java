@@ -1,5 +1,7 @@
 package com.study.leetcode.sort;
 
+import com.study.common.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,18 +14,18 @@ import java.util.List;
 @SuppressWarnings("all")
 public class MergeLinkedList {
 
-    public static Node merge(Node node1, Node node2) {
-        if (node1 == null) {
-            return node2;
+    public static ListNode merge(com.study.common.ListNode ListNode1, ListNode ListNode2) {
+        if (ListNode1 == null) {
+            return ListNode2;
         }
 
-        if (node2 == null) {
-            return node1;
+        if (ListNode2 == null) {
+            return ListNode1;
         }
 
         List<Integer> list = new ArrayList<>();
-        Node tmp = node1;
-        Node tmp2 = node2;
+        ListNode tmp = ListNode1;
+        ListNode tmp2 = ListNode2;
         while (tmp != null && tmp2 != null) {
             if (tmp.val <= tmp2.val) {
                 list.add(tmp.val);
@@ -44,107 +46,76 @@ public class MergeLinkedList {
             tmp2 = tmp2.next;
         }
 
-        Node newNode = new Node(list.get(0));
-        Node temp = newNode;
+        ListNode newListNode = new ListNode(list.get(0));
+        ListNode temp = newListNode;
         for (int i = 1; i < list.size(); i++) {
-            temp.next = new Node(list.get(i));
+            temp.next = new ListNode(list.get(i));
             temp = temp.next;
         }
 
-        printLinkedList(node1);
-        printLinkedList(node2);
+        ListNode.printLinkedList(ListNode1);
+        ListNode.printLinkedList(ListNode2);
 
-        return newNode;
+        return newListNode;
     }
 
     /**
      * 不破坏原链表结构的情况下合并两条链表
      */
-    public static Node merge2(Node node1, Node node2) {
-        if (node1 == null) {
-            return node2;
+    public static ListNode merge2(ListNode ListNode1, ListNode ListNode2) {
+        if (ListNode1 == null) {
+            return ListNode2;
         }
 
-        if (node2 == null) {
-            return node1;
+        if (ListNode2 == null) {
+            return ListNode1;
         }
 
-        Node dummyHead = new Node(0);
-        Node tmp = dummyHead;
+        ListNode dummyHead = new ListNode(0);
+        ListNode tmp = dummyHead;
 
-        Node tempNode1 = node1;
-        Node tempNode2 = node2;
+        ListNode tempListNode1 = ListNode1;
+        ListNode tempListNode2 = ListNode2;
 
-        while (tempNode1 != null && tempNode2 != null) {
-            if (tempNode1.val <= tempNode2.val) {
-                tmp.next = new Node(tempNode1.val);
-                tempNode1 = tempNode1.next;
+        while (tempListNode1 != null && tempListNode2 != null) {
+            if (tempListNode1.val <= tempListNode2.val) {
+                tmp.next = new ListNode(tempListNode1.val);
+                tempListNode1 = tempListNode1.next;
             } else {
-                tmp.next = new Node(tempNode2.val);
-                tempNode2 = tempNode2.next;
+                tmp.next = new ListNode(tempListNode2.val);
+                tempListNode2 = tempListNode2.next;
             }
             tmp = tmp.next;
         }
 
-        if (tempNode1 != null) {
-            tmp.next = tempNode1;
+        if (tempListNode1 != null) {
+            tmp.next = tempListNode1;
         } else {
-            tmp.next = tempNode2;
+            tmp.next = tempListNode2;
         }
 
-        printLinkedList(node1);
-        printLinkedList(node2);
+        ListNode.printLinkedList(ListNode1);
+        ListNode.printLinkedList(ListNode2);
 
         return dummyHead.next;
     }
 
     public static void main(String[] args) {
-        Node head = new Node(2);
-        Node next1 = new Node(3);
-        Node next2 = new Node(5);
+        ListNode head = new ListNode(2);
+        ListNode next1 = new ListNode(3);
+        ListNode next2 = new ListNode(5);
 
-        Node next3 = new Node(1);
-        Node next4 = new Node(4);
-        Node next5 = new Node(6);
+        ListNode next3 = new ListNode(1);
+        ListNode next4 = new ListNode(4);
+        ListNode next5 = new ListNode(6);
         head.next = next1;
         next1.next = next2;
 
         next3.next = next4;
         next4.next = next5;
 
-        printLinkedList(head);
-        Node merged = merge2(head, next3);
-        printLinkedList(merged);
-    }
-
-    public static void printLinkedList(Node head) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(head.val);
-        sb.append(" -> ");
-        Node traverseHead = head.next;
-        while (traverseHead != null) {
-            sb.append(traverseHead.val);
-            sb.append(" -> ");
-            traverseHead = traverseHead.next;
-        }
-
-        sb.append("null\n");
-
-        System.out.println(sb.toString());
-    }
-
-    static class Node {
-        int val;
-        Node next;
-
-        Node(int val) {
-            this.val = val;
-            this.next = null;
-        }
-
-        Node(int val, Node next) {
-            this.val = val;
-            this.next = next;
-        }
+        ListNode.printLinkedList(head);
+        ListNode merged = merge2(head, next3);
+        ListNode.printLinkedList(merged);
     }
 }

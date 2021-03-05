@@ -34,27 +34,11 @@ public class 面试题0203删除中间节点 {
         next1.next = next2;
         next2.next = next3;
         deleteNode(next1);
-        printLinkedList(head);
+        ListNode.printLinkedList(head);
     }
 
     public static void deleteNode(ListNode node) {
         node.val = node.next.val;
         node.next = node.next.next;
-    }
-
-    public static void printLinkedList(ListNode head) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(head.val);
-        sb.append(" -> ");
-        ListNode traverseHead = head.next;
-        while (traverseHead != null) {
-            sb.append(traverseHead.val);
-            sb.append(" -> ");
-            traverseHead = traverseHead.next;
-        }
-
-        sb.append("null\n");
-
-        System.out.println(sb.toString());
     }
 }
