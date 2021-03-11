@@ -62,11 +62,10 @@ public class E_227_基本计算器II {
                 if (!opStack.isEmpty()) {
                     char op = opStack.pop();
                     if (op == '*') {
-                        num = num * numStack.pop() * sign;
+                        num = num * numStack.pop();
                     } else if (op == '/') {
-                        num = numStack.pop() / num * sign;
+                        num = numStack.pop() / num;
                     }
-                    sign = 1;
                 }
 
                 numStack.push(num * sign);
