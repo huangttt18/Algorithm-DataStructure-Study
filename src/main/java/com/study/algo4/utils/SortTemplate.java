@@ -1,4 +1,4 @@
-package com.study.algo4;
+package com.study.algo4.utils;
 
 import edu.princeton.cs.algs4.StdOut;
 

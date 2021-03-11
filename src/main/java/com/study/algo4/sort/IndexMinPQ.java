@@ -1,4 +1,4 @@
-package com.study.algo4;
+package com.study.algo4.sort;
 
 /**
  * 索引优先队列(最小堆)

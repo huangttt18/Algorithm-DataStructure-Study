@@ -1,4 +1,4 @@
-package com.study.algo4;
+package com.study.algo4.ds;
 
 import java.util.Scanner;
 

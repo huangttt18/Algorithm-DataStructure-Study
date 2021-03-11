@@ -1,4 +1,4 @@
-package com.study.algo4;
+package com.study.algo4.sort;
 
 /**
  * 最大堆(最大优先队列 Max Priority Queue)

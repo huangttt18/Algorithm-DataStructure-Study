@@ -1,4 +1,4 @@
-package com.study.algo4;
+package com.study.algo4.sort;
 
 /**
  * 链表实现队列

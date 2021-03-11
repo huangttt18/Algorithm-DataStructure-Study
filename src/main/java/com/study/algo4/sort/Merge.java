@@ -1,31 +1,49 @@
-package com.study.algo4;
+package com.study.algo4.sort;
+
+import com.study.algo4.utils.SortTemplate;
 
 /**
- * 归并排序：自底向上
+ * 归并排序：自顶向下
+ * 时间：Onlgn
+ * 空间：On
  *
  * @author <a href="mailto:danielhuang9618@gmail.com"> Daniel on 2021/2/25 </a>
  * @since <span>1.0</span>
  */
 @SuppressWarnings("all")
-public class MergeBU {
+public class Merge {
 
     // 辅助数组，用于归并逻辑
     public static Comparable[] aux;
 
     public static void sort(Comparable[] a) {
-        int n = a.length;
-        aux = new Comparable[n];
-        // size = 子数组大小
-        for (int size = 1; size < n; size *= 2) {
-            for (int i = 0; i < n - size; i += 2 * size) {
-                // 归并[i...i + size - 1]和[i + size...min(i + 2 * size - 1, n - 1))两个子数组
-                // 比如当size = 1，那么此时要归并的子数组为[0, 0]和[1, 1]
-                // merge(a, 0, 0, 1)
-                // 当size = 2，那么此时要归并的子数组为[0, 1]和[2, 3]
-                // merge(a, 0, 1, 3)
-                merge(a, i, i + size - 1, Math.min(i + 2 * size - 1, n - 1));
-            }
+        aux = new Comparable[a.length];
+        sort(a, 0, a.length - 1);
+    }
+
+    public static void sort(Comparable[] a, int lo, int hi) {
+        // OPTMIZE: 对于小规模的数组，使用插入排序的效率会更高
+        if (a.length <= 15) {
+            Insertion.sort(a);
+            return;
         }
+
+        if (lo >= hi)
+            // 此时表示所有的子数组已经排序好了，直接返回即可
+            return;
+
+        // 获取mid位置
+        int mid = lo + (hi - lo) / 2;
+        // 对[lo ... mid]区间的数组进行排序，即对数组的左半部分进行排序
+        sort(a, lo, mid);
+        // 对[mid + 1, hi]区间的数组进行排序，即对数组的右半部分进行排序
+        sort(a, mid + 1, hi);
+        // OPTMIZE: 如果mid所在元素小于mid+1所在元素，那么我们认为此时数组已经是有序的了，就不需要执行merge
+        if (SortTemplate.less(a[mid], a[mid + 1])) {
+            return;
+        }
+        // 排序完成之后将左右两部分归并
+        merge(a, lo, mid, hi);
     }
 
     public static void merge(Comparable[] a, int lo, int mid, int hi) {
@@ -55,11 +73,10 @@ public class MergeBU {
     }
 
     public static void main(String[] args) {
-        Long[] array = SortTemplate.randomArray(0, 200, 1000);
+        Long[] array = SortTemplate.randomArray(0, 20, 10000000);
 //        SortTemplate.show(array);
         sort(array);
 //        SortTemplate.show(array);
         System.out.println(SortTemplate.isSorted(array));
     }
-
 }

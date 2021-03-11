@@ -1,5 +1,6 @@
-package com.study.algo4;
+package com.study.algo4.utils;
 
+import com.study.algo4.sort.*;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.Stopwatch;
 

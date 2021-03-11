@@ -1,4 +1,6 @@
-package com.study.algo4;
+package com.study.algo4.sort;
+
+import com.study.algo4.utils.SortTemplate;
 
 import java.lang.reflect.Method;
 

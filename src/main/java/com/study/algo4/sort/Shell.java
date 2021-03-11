@@ -1,4 +1,6 @@
-package com.study.algo4;
+package com.study.algo4.sort;
+
+import com.study.algo4.utils.SortTemplate;
 
 /**
  * 希尔排序
