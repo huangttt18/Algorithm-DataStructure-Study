@@ -21,7 +21,7 @@ public class E_227_基本计算器II {
      * 当遇到数字时，
      *      首先通过公式 num = num * 10 + num求得当前的数字的实际值
      *      接着检查opStack中是否有元素
-     *          如果有元素，则将numStack中的元素pop出来，与当前元素相乘或者相除(根据opStack.pop()来判断相乘还是相除)。【注意使用完符号需要重置符号为正】
+     *          如果有元素，则将numStack中的元素pop出来，与当前元素相乘或者相除(根据opStack.pop()来判断相乘还是相除)。***【注意使用完符号需要重置符号为正】
      *      求值完毕之后，将当前值push到numStack
      * 最后将numStack中的元素pop出来并求和即可得到结果ans
      * @param s
