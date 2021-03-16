@@ -112,6 +112,23 @@ public class CommonUtils {
         System.out.println(sb.toString());
     }
 
+    public static void printArray(int[][] arr) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[\n");
+        for (int i = 0; i < arr.length; i++) {
+            sb.append("\t[");
+            for (int j = 0; j < arr[i].length; j++) {
+                sb.append(arr[i][j]);
+                sb.append("\t");
+                sb.append(",");
+            }
+            sb.replace(sb.length() - 2, sb.length() - 1, "]");
+            sb.append("\n");
+        }
+        sb.replace(sb.length() - 2, sb.length(), "\n]");
+        System.out.println(sb.toString());
+    }
+
     /**
      * 交换数组中的元素
      *
