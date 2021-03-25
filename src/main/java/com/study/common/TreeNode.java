@@ -24,4 +24,29 @@ public class TreeNode {
         this.left = left;
         this.right = right;
     }
+
+    public static TreeNode buildTree(int... arr) {
+        if (arr == null || arr.length == 0)
+            return null;
+        TreeNode root = new TreeNode(arr[0]);
+        for (int i : arr) {
+            if (root.val < i) {
+                root.right = new TreeNode(root.val);
+            } else {
+                root.left = new TreeNode(root.val);
+            }
+        }
+        return root;
+    }
+
+
+    public static void printTree(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        printTree(root.left);
+        System.out.print(root.val + ",");
+        printTree(root.right);
+    }
 }
