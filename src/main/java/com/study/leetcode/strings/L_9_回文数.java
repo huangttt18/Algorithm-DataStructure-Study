@@ -10,6 +10,9 @@ package com.study.leetcode.strings;
 public class L_9_回文数 {
 
     public static boolean isPalindrome(int x) {
+        if (x > 0) {
+            return false;
+        }
         return x == reverse(x);
     }
 
