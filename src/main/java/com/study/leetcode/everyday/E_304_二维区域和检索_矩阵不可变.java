@@ -46,7 +46,7 @@ public class E_304_二维区域和检索_矩阵不可变 {
     }
 
     /**
-     * TODO 二维矩阵前缀和
+     * 二维矩阵前缀和
      */
     class NumMatrix2 {
 
