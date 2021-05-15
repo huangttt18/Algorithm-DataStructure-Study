@@ -148,6 +148,26 @@ public class CommonUtils {
         arr[indexLarge] = temp;
     }
 
+    public static void printDp(int[][] dp) {
+        assert dp != null : "入参dp数组不能为null";
+        int m = dp.length;
+        int n = dp[0].length;
+        StringBuilder sb = new StringBuilder();
+        sb.append("[\n");
+        for (int i = 0; i < m; i++) {
+            sb.append("\t[");
+            for (int j = 0; j < n; j++) {
+                if (j == n - 1)
+                    sb.append(dp[i][j]).append(i == n - 1 ? "]" : "],").append("\n");
+                else
+                    sb.append(dp[i][j]).append(",");
+            }
+        }
+        sb.append("]");
+        System.out.println(sb.toString());
+    }
+
+
     public static void measureCost(Object target, Method method, Object params) {
         try {
             long start = System.nanoTime();

@@ -41,7 +41,7 @@ public class E_1143_最长公共子序列 {
     }
 
     public static void main(String[] args) {
-        String text1 = "psnw", text2 = "vozsh";
+        String text1 = "delete", text2 = "leet";
         System.out.println(longestCommonSubsequence(text1, text2));
     }
 }

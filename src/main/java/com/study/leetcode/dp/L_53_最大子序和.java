@@ -53,6 +53,39 @@ public class L_53_最大子序和 {
         return ans;
     }
 
+    /**
+     * dp[i]：以第i个元素为结尾的子数组的最大和
+     */
+    public static int maxSubArray3(int[] nums) {
+        if (nums == null || nums.length == 0)
+            return 0;
+        int length = nums.length;
+        int[] dp = new int[length];
+        dp[0] = nums[0];
+        for (int i = 1; i < length; i++) {
+            dp[i] = Math.max(nums[i], nums[i] + dp[i - 1]);
+        }
+
+        int ans = Integer.MIN_VALUE;
+        for (int num : dp) {
+            ans = Math.max(num, ans);
+        }
+        return ans;
+    }
+
+    public static int maxSubArray4(int[] nums) {
+        if (nums == null || nums.length == 0)
+            return 0;
+        int length = nums.length;
+        int pre = 0;
+        int ans = nums[0];
+        for (int i = 0; i < length; i++) {
+            pre = Math.max(nums[i], nums[i] + pre);
+            ans = Math.max(ans, pre);
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
 //        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
         int[] nums = {5, 4, -1, 7, 8};
