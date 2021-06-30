@@ -1,5 +1,8 @@
 package com.study.common;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * 树结点
  *
@@ -26,8 +29,9 @@ public class TreeNode {
     }
 
     public static TreeNode buildTree(int... arr) {
-        if (arr == null || arr.length == 0)
+        if (arr == null || arr.length == 0) {
             return null;
+        }
         TreeNode root = new TreeNode(arr[0]);
         for (int i : arr) {
             if (root.val < i) {
@@ -48,5 +52,36 @@ public class TreeNode {
         printTree(root.left);
         System.out.print(root.val + ",");
         printTree(root.right);
+    }
+
+    public static void printTreeLevel(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        StringBuilder ans = new StringBuilder();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode poll = queue.poll();
+            if (poll != null) {
+                ans.append(poll.val).append(',');
+                queue.offer(poll.left);
+                queue.offer(poll.right);
+            } else {
+                ans.append("null").append(',');
+            }
+        }
+        String[] split = ans.substring(0, ans.length() - 1).split(",");
+        int i;
+        for (i = split.length - 1; i >= 0 && "null".equals(split[i]); i--)
+            ;
+
+        for (int j = 0; j <= i; j++) {
+            System.out.print(split[j]);
+            if (j != i)
+                System.out.print(',');
+        }
+        System.out.println();
     }
 }
